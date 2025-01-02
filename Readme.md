@@ -33,7 +33,7 @@ This project implements an algorithm to find the exchangeable classes of a Marko
      ```bash
      python3 GUI.py
      ```
-  3. If You wish to make an executable file for the GUI, execute the following command in the terminal:
+  3. If You wish to make an executable file for the GUI, execute the following command in the terminal (works only on UNIX systems):
         ```bash
             ./CreateExeForPalaciosAlgorithm.sh
         ```
