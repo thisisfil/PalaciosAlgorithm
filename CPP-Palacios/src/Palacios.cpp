@@ -17,15 +17,7 @@ vector<set<pair<int,int>>> find_classes(vector<vector<double>> K){
             throw invalid_argument("The matrix must be square.");
         }
     }
-    // Check if the matrix is square
-    /*
-    size_t numRows = K.size();
-    for (const auto& row : K) {
-        if (row.size() != numRows) {
-            throw invalid_argument("The matrix must be square.");
-        }
-    }
-    */
+
 
     // Collect all index pairs, for which the entries are greater zero
     set<pair<int,int>> remaining_pairs;
@@ -104,11 +96,11 @@ vector<set<pair<int,int>>> find_classes(vector<vector<double>> K){
 std::vector<std::set<int>> exchangeableClasses(const vector<vector<double>> K) {
     
     vector<set<pair<int,int>>> M = find_classes(K);
-    vector<set<int>> B(M.size()); // Erstelle einen vector<set<int>> mit derselben Größe wie M
+    vector<set<int>> B(M.size()); // Create a vector<set<int>> with the same size as M
     
     for (size_t i = 0; i < M.size(); ++i) {
         for (const auto& p : M[i]) {
-            B[i].insert(p.second); // Speichere die zweite Komponente jedes Paares in B
+            B[i].insert(p.second); // Store the second component of each pair in B
         }
     }
     
@@ -136,7 +128,7 @@ void printExchangeableClasses(const vector<set<int>>& B) {
         for (auto it = B[i].begin(); it != B[i].end(); ++it) {
             cout << *it;
             if (next(it) != B[i].end()) {
-                cout << ", ";  // Komma nur, wenn es nicht das letzte Element ist
+                cout << ", ";  // Comma only if it is not the last element
             }
         }
         cout << "}" << endl;

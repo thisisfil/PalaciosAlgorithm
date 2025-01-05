@@ -1,19 +1,19 @@
 def find_atoms(K):
     n = len(K)
-    #Find all the indices with positive entries
+    # Find all the indices with positive entries
     remaining_pairs = set((i, j) for i in range(n) for j in range(n) if K[i][j] > 0)
 
-    #Create a list of all sets of chosen index pairs
+    # Create a list of all sets of chosen index pairs
     M_list = []
 
     while remaining_pairs:
-        #Create the (initially empty) set of chosen index pairs
+        # Create the (initially empty) set of chosen index pairs
         M = set()
-        #Choose an aritrary index pair which has not been processed yet
-        i0, j0 = remaining_pairs.pop()  # Wähle ein beliebiges verbleibendes Paar
+        # Choose an aritrary index pair which has not been processed yet
+        i0, j0 = remaining_pairs.pop()  # Choose an arbitrary index pair
         M.add((i0, j0))
 
-        # Liste der neuen Paare, die hinzugefügt werden
+        # List of new pairs to be added 
         new_pairs = {(i0, j0)}
  
         while new_pairs:

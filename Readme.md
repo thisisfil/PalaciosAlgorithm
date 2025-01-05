@@ -21,19 +21,19 @@ This project implements an algorithm to find the exchangeable classes of a Marko
 ## Available Implementations
 
 ### 1. Python
-- **Files:** `PalaciosAlg.py`, `GUI.py`
+- **Files:** `PalaciosAlg.py`, `PalaciosAlgorithmGUI.py`
 - **Description:** 
   - `PalaciosAlg.py` contains the algorithm implementation in Python. It can be further used in other python programs by importing the functions "find_atoms" or "find_classes"
     - `find_atoms`: outputs the sets $A \times B$ for which $\{X_0 \in A\} = \{X_1 \in B\}$. 
     - `find_classes`: outputs the exchangeable classes, i.e. the $I \subset \mathbb{X}$ for which $I$ is an exchangeable class
-  - `GUI.py` provides a graphical user interface for the Python implementation.
+  - `PalaciosAlgorithmGUI.py` provides a graphical user interface for the Python implementation.
 - **Execution:** There are three ways to execute the 
   1. Open the executable file `class_finder` (no Python installation required).
   2. Alternatively, you can use Python directly:
      ```bash
      python3 GUI.py
      ```
-  3. If You wish to make an executable file for the GUI, execute the following command in the terminal:
+  3. If You wish to make an executable file for the GUI, execute the following command in the terminal (only works on UNIX systems):
         ```bash
             ./CreateExeForPalaciosAlgorithm.sh
         ```
@@ -58,4 +58,6 @@ This project implements an algorithm to find the exchangeable classes of a Marko
 For questions or feedback, please contact
 
 - Filip Bojko
+- https://github.com/thisisfil
 - fil.bojko@icloud.com
+- filip.bojko@student.uni-tuebingen.de
